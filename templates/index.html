@@ -1,0 +1,9 @@
+<script type=text/javascript>
+    const movie_name = {{ movie_name|tojson }};
+ </script>
+ 
+ 
+   <video id="video" defaultMuted autoplay playsinline controls>
+     <source src="{{ url_for('static', filename=movie_name) }}" type="video/{{movie_ext}}">
+     Your browser does not support the video tag.
+   </video>
